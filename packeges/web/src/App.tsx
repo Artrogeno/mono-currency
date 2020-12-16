@@ -1,11 +1,15 @@
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
 
-const App = () => {
-  return (
-    <div>
-      <h2>OPA</h2>
-    </div>
-  )
-}
+import AuthProvider from './shared/contexts/auth'
+import Routes from './routes'
+
+const App: React.FC = () => (
+  <BrowserRouter>
+    <AuthProvider>
+      <Routes />
+    </AuthProvider>
+  </BrowserRouter>
+)
 
 export default App
