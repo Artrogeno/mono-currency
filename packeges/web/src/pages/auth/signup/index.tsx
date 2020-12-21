@@ -1,16 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { RouteComponentProps } from 'react-router-dom'
 
-const SignUp: React.FC = () => {
+import Form from './components/form'
+import { Container, Nav, Link, Title } from './styles'
+
+const SignUp: React.FC<RouteComponentProps> = props => {
   return (
-    <div>
-      <Link to="/">Back</Link>
-      <br />
-      <Link to="/signin">Sign In</Link>
-      <br />
-      <br />
-      <h2>SignUp</h2>
-    </div>
+    <Container>
+      <Nav>
+        <Link to="/">Back</Link>
+        <Link to="/signin">Sign In</Link>
+      </Nav>
+      <Title>Sign Up</Title>
+      <Form {...props} />
+    </Container>
   )
 }
 

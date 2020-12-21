@@ -14,6 +14,11 @@ export default createGlobalStyle`
     --navleft-width-open: 13.6rem;
   }
 
+  a {
+    text-decoration: none;
+    color: ${props => props.theme.fg.body};
+  }
+
   body {
     font-size: 1rem;
     font-family: 'Roboto', sans-serif;
