@@ -11,17 +11,15 @@ import Home from '../pages/public/home'
 import Dash from '../pages/private/dash'
 import Users from '../pages/private/users'
 
-const Routes = () => {
-  return (
-    <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/signin" component={SignIn} />
-      <Route path="/signup" component={SignUp} />
+const Routes = () => (
+  <Switch>
+    <Route path="/" exact component={Home} />
+    <Route path="/signin" component={SignIn} />
+    <Route path="/signup" component={SignUp} />
 
-      <PrivateRoute path="/dash" component={Dash} />
-      <PrivateRoute path="/users" component={Users} />
-    </Switch>
-  )
-}
+    <PrivateRoute path="/dash" component={Dash} />
+    <PrivateRoute path="/users" component={Users} />
+  </Switch>
+)
 
 export default Routes
