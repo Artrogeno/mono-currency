@@ -6,6 +6,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "baseUrl": "./src",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -27,5 +28,34 @@
   },
   "include": [
     "src"
-  ]
+  ],
+  "paths": {
+    "@routes/*": [
+      "./src/routes/*"
+    ],
+    "@pages/*": [
+      "./src/pages/*"
+    ],
+    "@shared/*": [
+      "./src/shared/*"
+    ],
+    "@interfaces/*": [
+      "./src/shared/interfaces/*"
+    ],
+    "@components/*": [
+      "./src/shared/components/*"
+    ],
+    "@services/*": [
+      "./src/shared/hooks/*"
+    ],
+    "@hooks/*": [
+      "./src/shared/services/*"
+    ],
+    "@contexts/*": [
+      "./src/shared/contexts/*"
+    ],
+    "@constants/*": [
+      "./src/shared/constants/*"
+    ]
+  }
 }
